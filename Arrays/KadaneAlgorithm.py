@@ -9,6 +9,6 @@ while t>0:
         if sum>max_sum:
             max_sum=sum
         else:
-            max_sum=a[i]
+            sum=a[i]
     print(max_sum)
     t-=1
