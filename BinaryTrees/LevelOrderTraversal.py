@@ -6,7 +6,7 @@ class Node:
 def printLevelOrder(root):
     if root is None:
         return 
-    queue=[]
+    queue=[]    
     queue.append(root)
     while(len(queue)>0):
         print(queue[0].value)
