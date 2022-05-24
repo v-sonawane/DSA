@@ -4,5 +4,6 @@ Find the list here: <a href="https://docs.google.com/spreadsheets/d/1FMdN_OCfOI0
 <li>
   Contents:
   <ul><a href="https://github.com/v-sonawane/DSA/tree/main/Arrays">Arrays</a></ul>
+  <ul><a href="https://github.com/v-sonawane/DSA/tree/main/LinkedLists">Linked Lists</a></ul>
   <ul><a href="https://github.com/v-sonawane/DSA/tree/main/BinaryTrees">Binary Trees</a></ul>
   </li>
