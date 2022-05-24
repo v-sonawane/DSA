@@ -41,9 +41,8 @@ public class InsertAtBeginning{
             list.head=new_node;
         }
         else{
-            Node curNode=list.head;
+            new_node.next=list.head; 
             list.head=new_node;
-            list.head.next=curNode;
         }
 
         return list;
