@@ -46,8 +46,7 @@ public class InsertAtEnd {
 
                 Node curNode=list.head;
 
-                while(curNode.next!=
-                null){
+                while(curNode.next!=null){
                     curNode=curNode.next;
                 }
                 curNode.next=new_node;
