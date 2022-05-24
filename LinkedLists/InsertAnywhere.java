@@ -1,4 +1,4 @@
-public class DeleteFromEnd {
+public class InsertAnywhere {
     
     Node head;
 
@@ -13,7 +13,7 @@ public class DeleteFromEnd {
         }
     }
 
-    DeleteFromEnd insert(DeleteFromEnd list, int value){
+    InsertAnywhere insert(InsertAnywhere list, int value){
         
         Node new_node = new Node(value);
         new_node.next=null;
@@ -35,20 +35,32 @@ public class DeleteFromEnd {
         return list;
     }
 
-    DeleteFromEnd deleteFromEnd(DeleteFromEnd list){
-        if(list.head==null){
-            return null;
+    InsertAnywhere insertAnywhere(InsertAnywhere list, int pos,int value){
+        Node new_node=new Node(value);
+        Node curNode=list.head;
+        if(pos==1){
+            if(curNode==null){
+                curNode=new_node;
+            }
+            else{
+                new_node.next=curNode;
+                curNode=new_node;
+            }
         }
         else{
-            while(list.head.next.next!=null){
-                list.head=list.head.next;
+            int i=1;
+            while(i<=pos-2){
+                curNode=curNode.next;
+                i++;
             }
-            list.head.next=null;
+            Node temp=curNode.next;
+            curNode.next=new_node;
+            new_node.next=temp;
         }
         return list;
     }
 
-    void printList(DeleteFromEnd list){
+    void printList(InsertAnywhere list){
         Node current_node=list.head;
         if(current_node==null){
             System.out.println("No items are present in the list");
@@ -63,10 +75,11 @@ public class DeleteFromEnd {
     }
 
     public static void main(String[] args){
-        DeleteFromEnd list=new DeleteFromEnd();
+        InsertAnywhere list=new InsertAnywhere();
         list.insert(list, 1);
         list.insert(list,2);
-        list.deleteFromEnd(list);
+        list.insert(list,3);
+        list.insertAnywhere(list, 2,5);      
         list.printList(list);
     }
 }
