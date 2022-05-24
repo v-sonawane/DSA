@@ -12,7 +12,7 @@ public class LinkedList{
         }
     }
 
-    public static LinkedList insert(LinkedList list, int data){
+    public LinkedList insert(LinkedList list, int data){
         Node new_node=new Node(data);
         new_node.next=null;
 
@@ -50,3 +50,4 @@ public class LinkedList{
         list.printList(list);
     }
 }
+
